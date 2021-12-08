@@ -1,0 +1,54 @@
+@import "displayFlex";
+
+*{margin: 0px; padding: 0px;}
+
+
+body{
+    background-color: #a8dadc;
+    header{
+        @include displayFlex(row, space-between, center);
+        background-color: #1d3557;
+        height: 200px;
+
+        label{
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div{
+            width: 250px;
+            height: 100px;
+        }
+
+        div:nth-child(1){
+            @include displayFlex(row, space-between, center);
+            select{
+                width: 210px;
+                height: 30px;
+                background-color: rgba(0,0,0,0.01);
+                color: #fff;
+                border: solid 1px #fff;
+            }
+        }
+
+        div:nth-child(2){
+            width: 300px;
+            @include displayFlex(column, center, center);
+        }
+    }
+
+
+
+    section{
+        width: 100vw;
+        height: 1000px;
+       
+        @include displayFlex(column, center, center);
+        article{
+            @include displayFlex(row, center, flex-start);
+            width: 80%;
+            height: 50%;
+            border: 1px solid #168aad;
+        }
+    }
+}
